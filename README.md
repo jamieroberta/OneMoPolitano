@@ -1,2 +1,2 @@
 # Jamie & Stephen are getting married!
-Come celebrate with us!
+Website coming soon :)
