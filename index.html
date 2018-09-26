@@ -47,6 +47,48 @@ Stephen & Jamie | We're Getting Married!
 
 </script>
 
+<!-- SHADOW BOX -->
+
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
 <!-- Java Script -->
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -97,71 +139,147 @@ function scrollNav(id){
 
 			<h1 class="pictures-title">Pictures</h1>
 
-			<h2 class="gallery-title">Click on the boxes</h2>
+			<h2 class="gallery-title">Click on the photos</h2>
 
 			<div class="gallery">
-				<a class="photo one" rel="story-gallery" href="images/gallery/ss-01.jpg" title="">Photo<span></span></a>
-				<a class="photo two" rel="story-gallery" href="images/gallery/ss-02.jpg" title="">Photo<span></span></a>
-				<a class="photo three" rel="story-gallery" href="images/gallery/ss-03.jpg" title="">Photo<span></span></a>
-				<a class="photo four" rel="story-gallery" href="images/gallery/ss-04.jpg" title="">Photo<span></span></a>
-				<a class="photo five" rel="story-gallery" href="images/gallery/ss-05.jpg" title="">Photo<span></span></a>
-				<a class="photo six" rel="story-gallery" href="images/gallery/ss-06.jpg" title="">Photo<span></span></a>
-				<a class="photo seven" rel="story-gallery" href="images/gallery/ss-07.jpg" title="">Photo<span></span></a>
-				<a class="photo eight" rel="story-gallery" href="images/gallery/ss-08.jpg" title="">Photo<span></span></a>
-				<a class="photo nine" rel="story-gallery" href="images/gallery/ss-09.jpg" title="">Photo<span></span></a>
-				<a class="photo ten" rel="story-gallery" href="images/gallery/ss-10.jpg" title="">Photo<span></span></a>
-				<a class="photo eleven" rel="story-gallery" href="images/gallery/ss-11.jpg" title="">Photo<span></span></a>
-				<a class="photo twelve" rel="story-gallery" href="images/gallery/ss-12.jpg" title="">Photo<span></span></a>
-				<a class="photo thirteen" rel="story-gallery" href="images/gallery/ss-13.jpg" title="">Photo<span></span></a>
-				<a class="photo fourteen" rel="story-gallery" href="images/gallery/ss-14.jpg" title="">Photo<span></span></a>
-				<a class="photo fifteen" rel="story-gallery" href="images/gallery/ss-15.jpg" title="">Photo<span></span></a>
-				<a class="photo sixteen" rel="story-gallery" href="images/gallery/ss-16.jpg" title="">Photo<span></span></a>
-				<a class="photo seventeen" rel="story-gallery" href="images/gallery/ss-17.jpg" title="">Photo<span></span></a>
-				<a class="photo eighteen" rel="story-gallery" href="images/gallery/ss-18.jpg" title="">Photo<span></span></a>
+
+            <div class="row">
+              <img src="images/gallery/jamiestephen.jpg" class="gallery-image hover-shadow cursor firstpic" onclick="openModal();currentSlide(1)">
+              <img src="images/gallery/momdad.PNG" class="gallery-image hover-shadow cursor" onclick="openModal();currentSlide(2)">
+              <img src="images/gallery/jamiestephen.jpg" class="gallery-image hover-shadow cursor" onclick="openModal();currentSlide(3)">
+              <img src="images/gallery/momdad.PNG" class="gallery-image hover-shadow cursor" onclick="openModal();currentSlide(4)">
+              <img src="images/gallery/jamiestephen.jpg" class="gallery-image hover-shadow cursor" onclick="openModal();currentSlide(5)">
+              <img src="images/gallery/momdad.PNG" class="gallery-image hover-shadow cursor" onclick="openModal();currentSlide(6)">
+              <img src="images/gallery/jamiestephen.jpg" class="gallery-image hover-shadow cursor" onclick="openModal();currentSlide(7)">
+              <img src="images/gallery/momdad.PNG" class="gallery-image hover-shadow cursor lastpic" onclick="openModal();currentSlide(8)">
+            </div>
+
 			</div>
+
+			<h2 class="gallery-subtitle">scroll right <span class="arrow">&rarr;</span></h2>
 
 		</div>
 	</div>
+
+<!-- Shadow box modal -->
+
+  <div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 8</div>
+      <img src="images/gallery/jamiestephen.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 8</div>
+      <img src="images/gallery/momdad.PNG" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 8</div>
+      <img src="images/gallery/jamiestephen.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 8</div>
+      <img src="images/gallery/momdad.PNG" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 8</div>
+      <img src="images/gallery/jamiestephen.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 8</div>
+      <img src="images/gallery/momdad.PNG" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 8</div>
+      <img src="images/gallery/jamiestephen.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">8 / 8</div>
+      <img src="images/gallery/momdad.PNG" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="images/gallery/jamiestephen.jpg" style="width:100%" onclick="currentSlide(1)" alt="Stephen and I">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery/momdad.PNG" style="width:100%" onclick="currentSlide(2)" alt="Mom and Dad">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery/jamiestephen.jpg" style="width:100%" onclick="currentSlide(3)" alt="Stephen and I">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery/momdad.PNG" style="width:100%" onclick="currentSlide(4)" alt="Mom and Dad">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery/jamiestephen.jpg" style="width:100%" onclick="currentSlide(5)" alt="Stephen and I">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery/momdad.PNG" style="width:100%" onclick="currentSlide(6)" alt="Mom and Dad">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery/jamiestephen.jpg" style="width:100%" onclick="currentSlide(7)" alt="Stephen and I">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/gallery/momdad.PNG" style="width:100%" onclick="currentSlide(8)" alt="Mom and Dad">
+    </div>
+  </div>
+</div>
 
 <!-- Our Story Frame -->
 
 	<div class="story slide">
 		<div class="content-box">
 
-			<div class="story-title"><h1>Our Story</h1></div>
+			<h1 class="story-title">Our Story</h1>
 
-			<h2>Rollover the timeline</h2>
+			<h2>Rollover the timeline</h3>
 
 			<div class="timeline">
 
-
 				<div class="highlights">
 					<a class="heart first">Highlight 1<span></span></a>
-					<h4><span>September, 2008</span><br />Katie + Luke first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Katie would prove to be a tad…elusive…on the road to a dating relationship.</h4>
+					<h4><span>Sometime, 2014</span><br />we met</h4>
 				</div>
 				<div class="highlights">
 					<a class="heart second">Highlight 2<span></span></a>
-					<h4><span>April, 2009</span><br />On a rainy spring evening in Seattle, with Norah Jones playing ever so softly in the background, Luke nervously asked Katie to be his girlfriend.  The first kiss followed shortly after…</h4>
+					<h4><span>November 8th, 2014</span><br />michigan state game</h4>
 				</div>
 				<div class="highlights">
 					<a class="heart third">Highlight 3<span></span></a>
-					<h4><span>June, 2010</span><br />Katie + Luke made a wonderful journey to Scotland together.  It was on this trip they decided tea times should be institutionalized in the United States and that they wouldn’t mind having a pet sheep someday.</h4>
+					<h4><span>December 30th, 2014</span><br />started dating</h4>
 				</div>
 				<div class="highlights">
 					<a class="heart fourth">Highlight 4<span></span></a>
-					<h4><span>July, 2010</span><br />Katie moved to Spokane, Washington for grad school (i.e.) Katie + Luke embarked upon a two-year long-distance relationship.  They endured tedious drives across the state, bad skype connections, and a few tearful goodbyes (on Katie’s end), but they survived and decided to get married, soooooo it all worked out.  </h4>
+					<h4><span>April 5th, 2017</span><br />got in to ohio state medical school</h4>
 				</div>
 				<div class="highlights">
 					<a class="heart fifth">Highlight 5<span></span></a>
-					<h4><span>June-Aug 2011</span><br />Katie + Luke had the pleasure and privilege of taking TWO family vacations with the Litzenberg and Clum clans: they socialized with sea turtles in Kauai and made pleasantries with mosquitoes in Minnesota.</h4>
+					<h4><span>July 2017</span><br />stephen moved to columbus</h4>
 				</div>
 				<div class="highlights">
 					<a class="heart sixth">Highlight 6<span></span></a>
-					<h4><span>January 22nd, 2012</span><br />Luke flew to London to surprise Katie and propose to her on the banks of the Thames River, just steps from Westminster Abbey.  She said yes, and they hopped happily back across the pond to begin the adventure of future wedded bliss.</h4>
+					<h4><span>May 25th, 2018</span><br />proposed</h4>
 				</div>
 				<div class="highlights">
 					<a class="heart seventh">Highlight 7<span></span></a>
-					<h4><span>January 23rd, 2012</span><br />Wedding stress began...</h4>
+					<h4><span>May 26th, 2018</span><br />wedding plans began...</h4>
 				</div>
 
 			</div>
@@ -175,43 +293,9 @@ function scrollNav(id){
 	<div class="info slide">
 		<div class="content-box">
 
-			<div class="info-title"><h1>Event Info</h1></div>
+  			<h1 class="info-title">Event Info</h1>
 
-			<div class="map-content">
-				<img class="map" src="images/map.png" alt="Map" />
-			</div>
-
-			<div class="info-content">
-				<h2>Lord Hill Farms</h2>
-				<h3>Ceremony at 5:30</h3>
-				<h3>Dinner and dancing to follow</h3>
-
-				<div class="more-info">
-				<a class="info btn" id="getmore-info" href="#inline1" title="">More Event Info<span></span></a>
-				</div>
-
-				<div style="display: none;">
-					<div id="inline1" style="width:600px;height:550px;overflow:auto;">
-					<p>The ceremony will begin at 5:30pm and will take place outside, weather permitting.  Dinner and dancing will follow shortly after.  Bring your party pants/dresses people, it’s going to be a good ole’ time. Dress is semiformal; bow ties and/or bolo ties are encouraged.</p>
-<div class="line-seperator"></div>
-<p>Lord Hill Farms is located in Snohomish, about 45 minutes north of Seattle.  Please allow between 45 and 60 minutes travel time to reach Lord Hill Farms if leaving from Seattle (it’s awkward being late to a wedding, isn’t it?). Ample parking will be available on site.</p>
-<p>Beer and Wine will be served at the reception by a licensed bartender. If you are over the age of 21 and wish to partake, please make sure to bring your ID with you.</p>
-<div class="line-seperator"></div>
-<p>If you are joining us from out of town, you may wish to book a hotel reservation.  Some hotels we can recommend that are located closer to the venue include:</p>
-<p>•	<a href="http://www.guesthouseintl.com" target="_blank">Guesthouse Inn &amp; Suites Monroe</a> ($)<br />
-•	<a href="http://hiltongardeninn3.hilton.com" target="_blank">Hilton Garden Inn Seattle/Bothell</a> ($$)<br />
-•	<a href="http://www.willowslodge.com/index.html" target="_blank">Willows Lodge Woodinville</a> ($$$)</p>
-<p>Many other lodging accommodations are available closer to downtown Seattle; we recommend you look for lodging there if you’re planning on exploring the city a bunch over the weekend.</p>
-<div class="line-seperator"></div>
-<p>Any questions, comments, concerns, playlist requests, or accommodation inquiries, feel free to contact Katie or Luke: <a href="mailto:katieplusluke@gmail.com">katieplusluke@gmail.com</a></p>
-
-					</div>
-				</div>
-
-				<div class="get-directions">
-				<a href="http://goo.gl/maps/V1XY" target="_blank" class="directions btn">Driving Directions<span></span></a>
-				</div>
-			</div>
+  			<h2>Coming Soon</h2>
 
 		</div>
 	</div>
@@ -221,37 +305,9 @@ function scrollNav(id){
 	<div class="party slide">
 		<div class="content-box">
 
-			<div class="party-title"><h1>The Wedding Party</h1></div>
+      <h1 class="party-title">Our People!</h1>
 
-			<h2>The people standing beside us!</h2>
-
-			<div class="groomsmen">
-				<h3 class="wp-title">Groomsmen</h3>
-
-				<div class="party-gallery">
-					<a class="wp one" rel="guys-gallery" href="images/gallery/guys1.jpg" title="BEST MAN: Josiah Brown">Photo One<span></span></a>
-					<a class="wp two" rel="guys-gallery" href="images/gallery/guys2.jpg" title="Levi Clum">Photo One<span></span></a>
-					<a class="wp three" rel="guys-gallery" href="images/gallery/guys3.jpg" title="Trevor White">Photo One<span></span></a>
-					<a class="wp four" rel="guys-gallery" href="images/gallery/guys4.jpg" title="Aaron McConkey">Photo One<span></span></a>
-					<a class="wp five" rel="guys-gallery" href="images/gallery/guys5.jpg" title="Chris Kyle">Photo One<span></span></a>
-					<a class="wp six" rel="guys-gallery" href="images/gallery/guys6.jpg" title="Chris Hanke">Photo One<span></span></a>
-					<a class="wp seven" rel="guys-gallery" href="images/gallery/guys7.jpg" title="Jake Kirkwood">Photo One<span></span></a>
-				</div>
-			</div>
-
-			<div class="bridesmaids">
-				<h3 class="wp-title">Bridesmaids</h3>
-
-				<div class="party-gallery">
-					<a class="wp one" rel="girls-gallery" href="images/gallery/girls1.jpg" title="MAID OF HONOR: Ashlea Holcomb">Photo One<span></span></a>
-					<a class="wp two" rel="girls-gallery" href="images/gallery/girls2.jpg" title="MATRON OF HONOR: Mali Hawkins">Photo One<span></span></a>
-					<a class="wp three" rel="girls-gallery" href="images/gallery/girls3.jpg" title="Heidi Clum">Photo One<span></span></a>
-					<a class="wp four" rel="girls-gallery" href="images/gallery/girls4.jpg" title="Amy Archibald">Photo One<span></span></a>
-					<a class="wp five" rel="girls-gallery" href="images/gallery/girls5.jpg" title="Kashley Ricedorff">Photo One<span></span></a>
-					<a class="wp six" rel="girls-gallery" href="images/gallery/girls6.jpg" title="Beth Buer">Photo One<span></span></a>
-					<a class="wp seven" rel="girls-gallery" href="images/gallery/girls7.jpg" title="Kate Spencer">Photo One<span></span></a>
-				</div>
-			</div>
+      <h2>Coming Soon</h2>
 
 		</div>
 	</div>
@@ -261,7 +317,11 @@ function scrollNav(id){
 	<div class="rsvp slide">
 		<div class="content-box">
 
-			<div class="rsvp-title"><h1>RSVP: Come Join the Party!</h1></div>
+      <h1 class="rsvp-title">RSVP</h1>
+
+      <h2>Coming Soon</h2>
+
+			<!-- <div class="rsvp-title"><h1>RSVP: Come Join the Party!</h1></div>
 
 			<h2>Tell us if you're coming!</h2>
 
@@ -294,9 +354,7 @@ function scrollNav(id){
 
 				</div>
 
-			</form>
-
-			<h3 class="questions">For Questions Email: <a href="mailto:katieplusluke@gmail.com">katieplusluke@gmail.com</a></h3>
+			</form> -->
 
 		</div>
 	</div>
@@ -306,17 +364,9 @@ function scrollNav(id){
 	<div class="gifts slide">
 		<div class="content-box">
 
-			<div class="gifts-title"><h1>Gifts &amp; Registry</h1></div>
+      <h1 class="gifts-title">Gifts</h1>
 
-
-			<h2>Check out our registry</h2>
-
-			<div class="registry-imgs">
-				<a href="http://www.williams-sonoma.com/registry/3056782/registry-list.html" target="_blank" class="registry wsonoma">Williams Sonoma<span></span></a>
-				<a href="http://www.target.com/RegistryGiftGiverCmd?isPreview=false&status=completePageLink&listId=w-kmr8yaw1RCfNeRX30htQ&registryType=WD&cumulativeTime=-1&isAjax=false&noOfPings=" target="_blank" class="registry target">Target<span></span></a>
-				<a href="http://www.bedbathandbeyond.com/regGiftRegistry.asp?wrn=-1555599720&" target="_blank" class="registry bbeyond">Bed Bath &amp; Beyond<span></span></a>
-				<a href="http://www.potterybarn.com/registry/3056781/registry-list.html" target="_blank" class="registry pbarn">Pottery Barn<span></span></a>
-			</div>
+      <h2>Registries Coming Soon</h2>
 
 
 
