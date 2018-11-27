@@ -5,7 +5,6 @@
 /* FONT & TEXT STYLES */
 
 
-
 h1 {
 	padding:0;
   font-family: 'Montserrat', sans-serif;
@@ -66,6 +65,7 @@ html, body {
 body {
 	margin:0; padding:0;
 	font-family:Arial, Helvetica, sans-serif;
+	background-image: url("images/MobileBackground.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -73,18 +73,11 @@ body {
   line-height:25px;
 }
 
-@media (min-width: 300px) {
+@media (min-width: 450px) {
     .entire {
-			background-image: url("images/MobileBackground.jpg");
+			background-image: url("images/Background.png");
     }
 }
-
-@media (min-width: 600px) {
-    .entire {
-        background-image: url("images/Background.png");
-    }
-}
-
 
 
 .content-box{
