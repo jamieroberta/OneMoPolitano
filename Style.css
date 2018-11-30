@@ -50,6 +50,9 @@ p a {
 p a:hover{
 	color: rgb(248,202,105);
 }
+a:hover {
+  text-decoration: underline;
+}
 
 
 /* MAIN SITE STYLES */
@@ -539,12 +542,23 @@ img.hover-shadow {
 .info {
 }
 
+.info-link {
+	font-size: 25px;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	color: grey;
+}
+
+.info-link:hover {
+  text-decoration: underline;
+}
+
 .info .content-box{
   display: block;
   vertical-align: middle;
 	text-align: center;
 	height:450px;
-	margin-top:-260px;
+	margin-top:-300px;
 	position:absolute;
 	top:65%;
 	left:50%;
