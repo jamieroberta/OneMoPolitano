@@ -408,12 +408,17 @@ img.hover-shadow {
 .story {
 }
 
+.events {
+	font-size: 20px;
+	color: black;
+}
+
 .story .content-box{
   display: block;
   vertical-align: middle;
 	text-align: center;
 	height:460px;
-	margin-top:-260px;
+	margin-top:-290px;
 	position:absolute;
 	top:60%;
 	left:50%;
@@ -511,7 +516,7 @@ img.hover-shadow {
 .highlights h4 {
 	display:none;
   	position:absolute;
-  	background-color: rgb(230,230,230);
+  	background-color: white;
   	margin-left: auto;
     margin-right: auto;
     left: 0;
