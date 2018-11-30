@@ -48,7 +48,13 @@ p a {
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
 	color: grey;
-} 
+}
+h2 a {
+	font-size: 25px;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	color: grey;
+}
 
 
 /* MAIN SITE STYLES */
