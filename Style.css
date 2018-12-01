@@ -43,13 +43,13 @@ p {
 	line-height: 18px;
 	color:#363636
 }
-p a {
+p {
 	font-size: 25px;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
 	color: grey;
 }
-h2 a {
+h2 {
 	font-size: 25px;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
@@ -170,10 +170,12 @@ ul#navigation li:hover {
 	display:block;
 	margin-top: 20%;
 	position: relative;
+	color: black;
 }
 
 .home-date{
 	padding-top: 20px;
+	color: black;
 }
 
 .home-img {
@@ -195,12 +197,23 @@ ul#navigation li:hover {
 .pictures {
 }
 
+.pictures-link {
+	font-size: 50px;
+	font-family: 'Great Vibes', cursive;
+	text-decoration: none;
+	color: grey;
+}
+
+.pictures-link:hover {
+  text-decoration: underline;
+}
+
 .pictures .content-box{
   display: block;
   height: 290px;
   vertical-align: middle;
 	text-align: center;
-	margin-top:-180px;
+	margin-top:-100px;
 	vertical-align: middle;
 	position:absolute;
 	top:45%;
@@ -214,6 +227,7 @@ ul#navigation li:hover {
 	display:block;
 	margin-top: 10%;
 	position: relative;
+	padding-bottom: 20px;
 }
 .gallery-title{
 	font-size:35px;
