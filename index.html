@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 
 <!-- Site designed by Jamie Steines-->
-
 
 <title>
 Stephen & Jamie | We're Getting Married!
@@ -20,343 +19,147 @@ Stephen & Jamie | We're Getting Married!
 <meta property="og:image" content="http://onemopolitano.com/images/Jamie+Stephen.png" />
 <meta property="og:url" content="http://www.onemopolitano.com" />
 <meta property="og:type" content="website"/>
-<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Links -->
-
-<link rel="stylesheet" href="Style.css" media="screen,projection" type="text/css" />
-<link rel="stylesheet" type="text/css" href="jquery.fancybox-1.3.4.css" media="screen" />
-<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400" rel="stylesheet">
 <link rel="icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="image_src" href="images/fb-icon.jpg" />
-<link rel="stylesheet" href="js/scrollTo.css">
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400" rel="stylesheet">
 
-<!-- SHADOW BOX -->
-
-<script>
-function openModal() {
-  document.getElementById('myModal').style.display = "block";
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 'Montserrat', sans-serif;
+	font-weight:100;
+  color: white;
 }
 
-function closeModal() {
-  document.getElementById('myModal').style.display = "none";
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("img_parallax.jpg");
+  min-height: 100%;
 }
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+.bgimg-2 {
+  background-image: url("img_parallax2.jpg");
+  min-height: 400px;
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+.bgimg-3 {
+  background-image: url("img_parallax3.jpg");
+  min-height: 400px;
 }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.home-caption {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #800020;
+}
+.home-img {
+  width: 60%;
+}
+
+.info {
+  color: black;
+  font-size: 2vw;
+  background-color: white;
+  text-align:center;
+  padding:50px 80px;
+  text-align: justify;
+}
+.info-title {
+  margin: 0;
+}
+.info-subtitle {
+	font-family: 'Great Vibes', cursive;
+  font-size: 3vw;
+  color:grey;
+}
+
+h3 {
+  font: 'Montserrat', sans-serif;
+  font-size: 6vw;
+	font-weight:100;
+  color: #111;
+}
+
+p {
+  text-align:center;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
 }
-</script>
-
-<!-- Java Script -->
-<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
-<script type="text/javascript">
-
-// Scroll Animation
-
-function scrollNav(id){
-			$('html,body').animate({scrollTop: $(id).offset().top},'slow');
-}
-
-</script>
+</style>
 </head>
+<body>
 
-<body onload="reset()">
-
-<!-- Bottom Navigation -->
-
-<div id="header">
-<ul id="navigation">
-	<li class="home-nav" onClick="scrollNav('.home')">J & S</li>
-	<li class="pictures-nav" onClick="scrollNav('.pictures')">Pictures</li>
-	<li class="story-nav" onClick="scrollNav('.story')">Our Story</li>
-	<li class="info-nav" onClick="scrollNav('.info')">Event Info</li>
-	<li class="party-nav" onClick="scrollNav('.party')">Wedding Party</li>
-	<li class="rsvp-nav" onClick="scrollNav('.rsvp')">RSVP</li>
-	<li class="gifts-nav" onClick="scrollNav('.gifts')">Gifts</li>
-</ul>
+<div class="bgimg-1">
+  <div class="home-caption">
+    <img class="home-img" src="home_img.png"></img>
+  </div>
 </div>
 
-<!-- Home Frame -->
+<div class="info">
+  <h3 class="info-title" style="text-align:center;">Event Info</h3>
+  <p><span class="info-subtitle">Ceremony</span>: St. Roberts Chruch in Cortland, Ohio</p>
+  <p><span class="info-subtitle">Reception</span>: The Avalon Country Club at Buhl Park in Hermitage, Pennsylvania</p>
+</div>
 
-	<div class="home slide">
-		<div class="content-box">
-      <h2 class="home-title">Jamie + Stephen</h2>
-      <h1 class="home-date">4.26.2019</h1>
-		</div>
-	</div>
-
-<!-- Pictures Frame -->
-
-	<div class="pictures slide">
-		<div class="content-box">
-			<h1 class="pictures-title">Pictures</h1>
-      <h2 class="gallery-title">
-        <a class="pictures-link" href="https://emilymillayphotography.pixieset.com/g/jamieandstephen/" target="_blank">Click here to see all our engagment photos!</a>
-      </h2>
-		</div>
-	</div>
-
-<!-- Our Story Frame -->
-
-	<div class="story slide">
-		<div class="content-box">
-			<h1 class="story-title">Our Story</h1>
-			<h2>Rollover the timeline</h3>
-			<div class="timeline">
-				<div class="highlights">
-					<a class="heart first">Highlight 1<span></span></a>
-					<h4 class="events"><span>Sometime in 2014</span><br />Stephen and Jamie met during their highschool years</br>(Shh, they don't remember where or when)</h4>
-				</div>
-				<div class="highlights">
-					<a class="heart second">Highlight 2<span></span></a>
-					<h4 class="events"><span>November 8th, 2014</span><br />Stephen visited OSU to watch the Michigan State football game.</br>Luckily, Jamie was at the same party.</br>They celebrated the buckeye win together all evening!</h4>
-				</div>
-				<div class="highlights">
-					<a class="heart third">Highlight 3<span></span></a>
-					<h4 class="events"><span>December 30th, 2014</span><br />After a couple months, a few dates, and several FaceTime calls later... </br> Stephen and Jamie make it official!</h4>
-				</div>
-				<div class="highlights">
-					<a class="heart fourth">Highlight 4<span></span></a>
-					<h4 class="events"><span>Summer, 2016</span><br />Jamie took an internship in Cleveland.</br>They finally got to live in the same city!</br>...for 10 weeks</h4>
-				</div>
-				<div class="highlights">
-					<a class="heart fifth">Highlight 5<span></span></a>
-					<h4 class="events"><span>July 2017</span><br />2.5 years of long distance is over!</br>Stephen moves to Columbus to start Medical School at OSU while Jamie completes her 4th year of undergrad.</h4>
-				</div>
-				<div class="highlights">
-					<a class="heart sixth">Highlight 6<span></span></a>
-					<h4 class="events"><span>May 25th, 2018</span><br />Stephen gets down on one knee at Mill Creek Park.</br>Jamie says yes to forever.</br>Best day ever!</h4>
-				</div>
-				<div class="highlights">
-					<a class="heart seventh">Highlight 7<span></span></a>
-					<h4 class="events"><span>May 26th, 2018</span><br />Wedding planning began...</h4>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-<!-- Event Info Frame -->
-
-	<div class="info slide">
-		<div class="content-box">
-
-  			<h1 class="info-title">Event Info</h1>
-
-  			<h2><span style="font-size: 3vw;">Ceremony:</span> <span style="color: black; font-size: 2vw; font-family: 'Montserrat', sans-serif;">St. Roberts Chruch in Cortland, Ohio</span> </br></br>
-        <span style="font-size: 3vw;">Reception:</span> <span style="color: black; font-size: 2vw; font-family: 'Montserrat', sans-serif;">The Avalon Country Club at Buhl Park in Hermitage, Pennsylvania</span></br></br>
-        <span style="font-size: 3vw;">Hotel:</span> <span style="color: black; font-size: 2vw; font-family: 'Montserrat', sans-serif;">The Avalon Inn and Resort in Warren, Ohio</span></br></br>
-        <a class="info-link" href="https://www.reseze.net/servlet/SendPage?hotelid=1528&skipfirstpage=true&page=38124" target="_blank">Click here to book a hotel room!</a></h2>
-
-		</div>
-	</div>
-
-<!-- Wedding Party Frame -->
-
-	<div class="party slide">
-		<div class="content-box">
-
-      <h1 class="party-title">Our People!</h1>
-
-            <p>Jamie's people: </p><a href="./party/mara.html"><img src="images/gallery/mara.jpeg" class="gallery-image"></img></a>
-            <a href="./party/mara.html"><img src="images/gallery/rae.jpeg" class="gallery-image"></img></a>
-            <a href="./party/mara.html"><img src="images/gallery/fia.jpg" class="gallery-image"></img></a>
-            <a href="./party/mara.html"><img src="images/gallery/meg.JPG" class="gallery-image"></img></a>
-            <a href="./party/mara.html"><img src="images/gallery/katie.jpeg" class="gallery-image"></img></a>
-            <a href="./party/mara.html"><img src="images/gallery/nat.JPG" class="gallery-image"></img></a>
-            <a href="./party/mara.html"><img src="images/gallery/jimmy.JPG" class="gallery-image"></img></a>
-
-            <p>Stephen's people: </p><a href="./party/mara.html"><img src="images/gallery/pmac.JPG" class="gallery-image"></img></a>
-            <a href="./party/mara.html"><img src="images/gallery/kunk.jpeg" class="gallery-image"></img></a>
-            <a href="./party/mara.html"><img src="images/gallery/kyle.PNG" class="gallery-image"></img></a>
-            <a href="./party/mara.html"><img src="images/gallery/rasch.JPG" class="gallery-image"></img></a>
-            <a href="./party/mara.html"><img src="images/gallery/vid.JPG" class="gallery-image"></img></a>
-
-            <h2 class="gallery-title">Click on the photos</h2>
-
-      			<!-- <div class="gallery"> -->
-
-
-                  <!-- <div class="row">
-                    <img src="images/gallery/mara.jpeg" class="gallery-image hover-shadow cursor firstpic" onclick="openModal();currentSlide(1)">
-                    <img src="images/gallery/pmac.JPG" class="gallery-image hover-shadow cursor" onclick="openModal();currentSlide(2)">
-                    <img src="images/gallery/rae.jpeg" class="gallery-image hover-shadow cursor" onclick="openModal();currentSlide(3)">
-                    <img src="images/gallery/kunk.jpeg" class="gallery-image hover-shadow cursor" onclick="openModal();currentSlide(4)">
-                    <img src="images/gallery/fia.jpeg" class="gallery-image hover-shadow cursor" onclick="openModal();currentSlide(5)">
-                    <img src="images/gallery/kyle.PNG" class="gallery-image hover-shadow cursor" onclick="openModal();currentSlide(6)">
-                    <img src="images/gallery/meg.JPG" class="gallery-image hover-shadow cursor" onclick="openModal();currentSlide(7)">
-                    <img src="images/gallery/rasch.JPG" class="gallery-image hover-shadow cursor lastpic" onclick="openModal();currentSlide(8)">
-                    <img src="images/gallery/katie.jpeg" class="gallery-image hover-shadow cursor lastpic" onclick="openModal();currentSlide(9)">
-                    <img src="images/gallery/vid.JPG" class="gallery-image hover-shadow cursor lastpic" onclick="openModal();currentSlide(10)">
-                    <img src="images/gallery/nat.JPG" class="gallery-image hover-shadow cursor lastpic" onclick="openModal();currentSlide(11)">
-                    <img src="images/gallery/jimmy.JPG" class="gallery-image hover-shadow cursor lastpic" onclick="openModal();currentSlide(12)">
-                  </div> -->
-
-      			<!-- </div> -->
-
-      			<!-- <h2 class="gallery-subtitle">scroll right <span class="arrow">&rarr;</span></h2> -->
-
-
-		</div>
-	</div>
-
-  <!-- Shadow box modal -->
-
-    <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-
-      <div class="mySlides">
-        <div class="numbertext">1 / 12</div>
-        <img src="images/gallery/mara.jpeg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">2 / 12</div>
-        <img src="images/gallery/pmac.JPG" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">3 / 12</div>
-        <img src="images/gallery/rae.jpeg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">4 / 12</div>
-        <img src="images/gallery/kunk.jpeg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">5 / 12</div>
-        <img src="images/gallery/fia.jpeg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">6 / 12</div>
-        <img src="images/gallery/kyle.PNG" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">7 / 12</div>
-        <img src="images/gallery/meg.JPG" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">8 / 12</div>
-        <img src="images/gallery/rasch.JPG" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">9 / 13</div>
-        <img src="images/gallery/katie.jpeg" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">10 / 12</div>
-        <img src="images/gallery/vid.JPG" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">11 / 12</div>
-        <img src="images/gallery/nat.JPG" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">12 / 12</div>
-        <img src="images/gallery/jimmy.JPG" style="width:100%">
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>
-
-
-      <div class="column">
-        <img class="demo cursor" src="images/gallery/mara.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Maid of Honor: Mara">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/gallery/pmac.JPG" style="width:100%" onclick="currentSlide(2)" alt="Mom and Dad">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/gallery/jamiestephen.jpg" style="width:100%" onclick="currentSlide(3)" alt="Stephen and I">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/gallery/momdad.PNG" style="width:100%" onclick="currentSlide(4)" alt="Mom and Dad">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/gallery/jamiestephen.jpg" style="width:100%" onclick="currentSlide(5)" alt="Stephen and I">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/gallery/momdad.PNG" style="width:100%" onclick="currentSlide(6)" alt="Mom and Dad">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/gallery/jamiestephen.jpg" style="width:100%" onclick="currentSlide(7)" alt="Stephen and I">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/gallery/momdad.PNG" style="width:100%" onclick="currentSlide(8)" alt="Mom and Dad">
-      </div>
-    </div>
+<div class="bgimg-2">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
   </div>
+</div>
 
-<!-- RSVP Frame -->
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  </div>
+</div>
 
-	<div class="rsvp slide">
-		<div class="content-box">
+<div class="bgimg-3">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+  </div>
+</div>
 
-      <h1 class="rsvp-title">RSVP</h1>
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  </div>
+</div>
 
-      <h2>This will be available once you receive your invitation!</h2>
-
-      <!-- use rsvpify !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-
-		</div>
-	</div>
-
-<!-- Gifts Frame -->
-
-	<div class="gifts slide">
-		<div class="content-box">
-
-      <h1 class="gifts-title">Gifts</h1>
-
-      <h2>Click below to check out our registries!</h2>
-      <a href="https://www.target.com/gift-registry/gift/politano" target="_blank"><img src="images/target.png" class="target"></img></a>
-      <a href="https://www.amazon.com/wedding/share/politano" target="_blank"><img src="images/amazon.png" class="amazon"></img></a>
-
-
-
-		</div>
-	</div>
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">COOL!</span>
+  </div>
+</div>
 
 </body>
+</html>
