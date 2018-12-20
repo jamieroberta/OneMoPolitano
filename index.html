@@ -50,12 +50,12 @@ body, html {
 
 .bgimg-2 {
   background-image: url("img_parallax2.jpg");
-  min-height: 400px;
+  min-height: 70%;
 }
 
 .bgimg-3 {
   background-image: url("img_parallax3.jpg");
-  min-height: 400px;
+  min-height: 70%;
 }
 
 .caption {
@@ -88,14 +88,159 @@ body, html {
   text-align:center;
   padding:50px 80px;
   text-align: justify;
+  overflow: hidden;
+}
+.left-bouquet {
+  position: absolute;
+  left:12%;
+  top:105%;
+  width:15%;
+  /* transform: rotate(90deg); */
+}
+.right-bouquet {
+  position: absolute;
+  right:12%;
+  top:105%;
+  width:15%;
+  transform: scaleX(-1);
+  /* transform: rotate(-90deg); */
 }
 .info-title {
+  margin: 0;
+  text-align:center;
+}
+.info-date {
+	font-family: 'Great Vibes', cursive;
+  font-size: 3vw;
+  color:#68051a;
+  text-align:center;
+  font-weight: normal;
   margin: 0;
 }
 .info-subtitle {
 	font-family: 'Great Vibes', cursive;
   font-size: 3vw;
   color:grey;
+  margin:0;
+}
+.ceremony {
+  float:left;
+}
+.reception {
+  float:right;
+}
+
+.hotel {
+  position:relative;
+}
+.hotel-sub {
+  color:black;
+  background-color:white;
+  text-align:left;
+  padding:50px 80px;
+  text-align: justify;
+}
+.hotel-title {
+  margin:.5em 0 0 0;
+  text-align:left;
+  line-height: 2.5vw;
+}
+.hotel-link {
+  color: black;
+  text-align:left;
+  font-size: 3vw;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+.hotel-bouquet{
+  position: absolute;
+  right:5%;
+  top:0;
+  width:20%;
+  transform: rotate(120deg);
+}
+
+.story {
+  position:relative;
+}
+.story-sub {
+  color:black;
+  background-color:white;
+  text-align:center;
+  padding:50px 80px;
+  text-align: justify;
+}
+.story-title {
+  margin:.5em 0 0 0;
+  text-align:center;
+  line-height: 2.5vw;
+}
+.story-bouquet-top {
+  width:20%;
+  position:absolute;
+  left:1%;
+  top:1%;
+  transform: rotate(270deg);
+}
+.story-bouquet-bottom {
+  width:20%;
+  position:absolute;
+  right:1%;
+  bottom:1%;
+  transform: rotate(90deg);
+}
+
+.party {
+  position:relative;
+}
+.party-sub {
+  color:black;
+  background-color:white;
+  text-align:right;
+  padding:50px 80px;
+  text-align: justify;
+}
+.party-title {
+  margin:.5em 0 0 0;
+  text-align:right;
+}
+.party-bouquet-left {
+  height:100%;
+  position:absolute;
+  left:0;
+  top:0;
+}
+.party-groups {
+  text-align:right;
+}
+
+.pictures {
+  position:relative;
+}
+.pictures-sub {
+  color:black;
+  background-color:white;
+  text-align:center;
+  padding:50px 80px;
+  text-align: justify;
+}
+.pictures-title {
+  margin:.5em 0 0 0;
+  text-align:center;
+}
+.pictures-bouquet-left {
+  height:100%;
+  position:absolute;
+  left:0;
+  top:0;
+}
+.pictures-link {
+  color:#68051a;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
 }
 
 h3 {
@@ -109,10 +254,29 @@ p {
   text-align:center;
 }
 
-/* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
+/* Turn off parallax scrolling for tablets and phones */
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
+  }
+
+  .party-bouquet-left {
+    height:100%;
+    position:absolute;
+    left:0;
+    bottom:0;
+  }
+}
+@media only screen and (max-device-width: 745px) {
+  .ceremony {
+    float:left;
+    position:relative;
+    left:23%;
+  }
+  .reception {
+    float:left;
+    position:relative;
+    left:10%;
   }
 }
 </style>
@@ -126,38 +290,102 @@ p {
 </div>
 
 <div class="info">
-  <h3 class="info-title" style="text-align:center;">Event Info</h3>
-  <p><span class="info-subtitle">Ceremony</span>: St. Roberts Chruch in Cortland, Ohio</p>
-  <p><span class="info-subtitle">Reception</span>: The Avalon Country Club at Buhl Park in Hermitage, Pennsylvania</p>
+  <img class="left-bouquet" src="info-bouquet.png"></img>
+  <img class="right-bouquet" src="info-bouquet.png"></img>
+  <h3 class="info-title">Event Info</h3>
+  <h1 class="info-date">Friday, April 26th, 2019</h1>
+  <p class="ceremony"><span class="info-subtitle">Ceremony</span>: St. Roberts Church</br>4659 OH-46, Cortland, OH 44410</p>
+  <p class="reception"><span class="info-subtitle">Reception</span>: The Avalon Country Club at Buhl Park</br>1030 Forker Blvd, Hermitage, PA 16148</p>
 </div>
 
 <div class="bgimg-2">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
   </div>
 </div>
 
-<div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+<div class="hotel">
+  <div class="hotel-sub">
+    <img class="hotel-bouquet" src="hotel-bouquet.png"></img>
+    <h3 class="hotel-title">Hotel<span style="color:#68051a;font-size:2vw;font-family: 'Great Vibes', cursive;"></br>The Avalon Inn and Resort</br>9519 E Market St, Warren, Ohio 44484</span></h3>
+    <p style="color:#68051a;font-size:1.8vw;text-align:left;">There will be shuttles to escort guests to and from the reception at the beginning and end of the night!</p>
+    <p style="text-align:left;"><a class="hotel-link" href="https://www.reseze.net/servlet/SendPage?hotelid=1528&skipfirstpage=true&page=38124" target="_blank">Click here to book a hotel room!</a></p>
   </div>
 </div>
 
 <div class="bgimg-3">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
   </div>
 </div>
 
-<div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+<div class="story">
+  <div class="story-sub">
+    <img class="story-bouquet-top" src="story-bouquet.png"></img>
+    <img class="story-bouquet-bottom" src="story-bouquet.png"></img>
+    <h3 class="story-title">Our Story</h3>
+    <p>something</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div class="party">
+  <div class="party-sub">
+    <img class="party-bouquet-left" src="party-bouquet.png"></img>
+    <h3 class="party-title">Wedding Party</h3>
+    <p class="party-groups">Jamie's People:</p>
+    <p class="party-groups">Stephen's People:</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div class="pictures">
+  <div class="pictures-sub">
+    <h3 class="pictures-title">More Pictures</h3>
+    <p style="text-align:center;"><a class="pictures-link" href="https://emilymillayphotography.pixieset.com/g/jamieandstephen/" target="_blank">Click here to see all our engagment photos!</a></p>
+    <p>Thank you Emilymillayphotography!</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div class="pictures">
+  <div class="pictures-sub">
+    <h3 class="pictures-title">RSVP</h3>
+    <p>This will be available when you get your formal invitation!</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div class="pictures">
+  <div class="pictures-sub">
+    <h3 class="pictures-title">Gifts</h3>
+    <p>We are Registered at</p>
   </div>
 </div>
 
 <div class="bgimg-1">
   <div class="caption">
-  <span class="border">COOL!</span>
+  <span class="border"></span>
   </div>
 </div>
 
