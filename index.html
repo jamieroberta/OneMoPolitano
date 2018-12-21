@@ -226,6 +226,11 @@ a:hover{
   bottom:1%;
   transform: rotate(90deg);
 }
+.story-header{
+  color:#68051a;
+  font-size: 2vw;
+  font-family: 'Great Vibes', cursive;
+}
 
 .party {
   position:relative;
@@ -379,12 +384,12 @@ p {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 50px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: scroll; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
@@ -393,10 +398,10 @@ p {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 600px;
+  max-width: 500px;
 }
 /* Caption of Modal Image */
-.caption {
+.pic-caption {
   margin: auto;
   display: block;
   width: 80%;
@@ -406,8 +411,11 @@ p {
   padding: 10px 0;
   height: 150px;
 }
+.jimmy {
+  font-size: 14px;
+}
 /* Add Animation */
-.modal-content, .caption {
+.modal-content, .pic-caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -524,6 +532,10 @@ p {
     font-size: 4vw;
   }
 
+  .story-header{
+    font-size: 4vw;
+  }
+
   .party-sub{
     padding-right: 40px;
   }
@@ -624,7 +636,13 @@ p {
     <img class="story-bouquet-top" src="story-bouquet.png"></img>
     <img class="story-bouquet-bottom" src="story-bouquet.png"></img>
     <h3 class="story-title">Our Story</h3>
-    <p>something</p>
+    <p></br><span class="story-header">Sometime in 2014</span><br />Stephen and Jamie met during their highschool years</br>(Shh, they don't remember where or when)</p>
+    <p><span class="story-header">November 8th, 2014</span><br />Stephen visited OSU to watch the Michigan State football game.</br>Luckily, Jamie was at the same party.</br>They celebrated the buckeye win together all evening!</p>
+    <p><span class="story-header">December 30th, 2014</span><br />After a couple months, a few dates, and several FaceTime calls later... </br> Stephen and Jamie make it official!</p>
+    <p><span class="story-header">Summer, 2016</span><br />Jamie took an internship in Cleveland.</br>They finally got to live in the same city!</br>...for 10 weeks</p>
+    <p><span class="story-header">July 2017</span><br />2.5 years of long distance is over!</br>Stephen moves to Columbus to start Medical School at OSU while Jamie completes her 4th year of undergrad.</p>
+    <p><span class="story-header">May 25th, 2018</span><br />Stephen gets down on one knee at Mill Creek Park.</br>Jamie says yes to forever.</br>Best day ever!</p>
+    <p><span class="story-header">May 26th, 2018</span><br />Wedding planning began...</p>
   </div>
 </div>
 
@@ -641,102 +659,102 @@ p {
     <p class ="party-words">Click on their picture to see who they are!</p>
     <div class="gallery">
       <!-- Brides -->
-      <img id="maraImg" src="images/gallery/mara.jpeg" alt="Mara" class="gallery-image">
+      <img id="maraImg" src="images/gallery/mara.jpeg" alt="MAID OF HONOR: Mara Perisa is Jamie's older sister closest in age. Mara has been Jamie's best friend her entire life and has always been her go to person for everything and anything. Jamie has always looked up to her and been able to relate with her on most things in life! Mara is now a Chemist, wonderful wife, and soon-to-be mother living in Columbus as well." class="gallery-image">
       <!-- The Modal -->
       <div id="maraModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="mara">
-        <div class="caption"></div>
+        <div class="pic-caption"></div>
       </div>
 
-      <img id="rachelImg" src="images/gallery/rae.jpeg" alt="Rachel" class="gallery-image">
+      <img id="rachelImg" src="images/gallery/rae.jpeg" alt="BRIDESMAID: Rachel Weaver is also Jamie's older sister. Rachel and Jamie have a very special bond over belly laughs that make your abs sore and Rachel being young Jamie's second mother. Rachel now lives in St Louis, Missouri. She also is a wonderful wife, Respiratory Therapist, and a mother to an adorable 1y.o. boy, Connor." class="gallery-image">
       <!-- The Modal -->
       <div id="rachelModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="rachel">
-        <div class="caption"></div>
+        <div class="pic-caption"></div>
       </div>
 
-      <img id="fiaImg" src="images/gallery/fia.jpg" alt="Fia" class="gallery-image">
+      <img id="fiaImg" src="images/gallery/fia.jpg" alt="BRIDESMAID: Fia Steines is also Jamie's older sister. Fia and Jamie always bonded over their love for their school, Ohio State. Many mistake the two of them for twins and when they are together it's always a party:) Fia works in Sales at Continental Office, is currently Jamie's roommate, and is the mother to Jamie's other roommate (an Australian Shephard mix named willow)!" class="gallery-image">
       <!-- The Modal -->
       <div id="fiaModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="fia">
-        <div class="caption"></div>
+        <div class="pic-caption"></div>
       </div>
 
-      <img id="megImg" src="images/gallery/meg.JPG" alt="Megan" class="gallery-image">
+      <img id="megImg" src="images/gallery/meg.JPG" alt="BRIDESMAID: Megan Politano is Jamie's soon-to-be little sister! The two of them have so many things in common like an obsession for trendy beauty products and pinterest worthy beauty hacks. They always stay up talking for hours when they have sleepovers. Megan is in Nursing school as Youngstown State University." class="gallery-image">
       <!-- The Modal -->
       <div id="megModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="meg">
-        <div class="caption"></div>
+        <div class="pic-caption"></div>
       </div>
 
-      <img id="katieImg" src="images/gallery/katie.jpeg" alt="Katie" class="gallery-image">
+      <img id="katieImg" src="images/gallery/katie.jpeg" alt="BRIDESMAID: Katie Politano is Jamie's soon-to-be older sister! Katie and Jamie are already like sisters and bond over their love of cheese and wine, their annoyances with the groom;), and their same birthday! Jamie's confident her future children will be the fastest learned readers around thanks to their Aunt! Katie teaches 1st grade at Evamere Elementary in Huson, Ohio!" class="gallery-image">
       <!-- The Modal -->
       <div id="katieModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="katie">
-        <div class="caption"></div>
+        <div class="pic-caption"></div>
       </div>
 
-      <img id="natImg" src="images/gallery/nat.JPG" alt="Natalie" class="gallery-image">
+      <img id="natImg" src="images/gallery/nat.JPG" alt="BRIDESMAID: Natalie D'Amico is one of Jamie's best friends and has been since 6th grade when they started going to school together. The two of them are practically like sisters and remained just as close, if not closer, through college while Natalie went to University of Pittsburgh! Natalie is getting her Masters in Speech Pathology at Kent State University." class="gallery-image">
       <!-- The Modal -->
       <div id="natModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="nat">
-        <div class="caption"></div>
+        <div class="pic-caption"></div>
       </div>
 
-      <img id="jimImg" src="images/gallery/jimmy.JPG" alt="James" class="gallery-image">
+      <img id="jimImg" src="images/gallery/jimmy.JPG" alt="BRIDESMAN: James Mitolo, or as Jamie and several others know him by, Jimmy, has gone to school with Jimmy since 7th grade. They lived together for 2 years in College. Their families have been close for ages and sometimes they forget they aren't actual family. They are kindred souls and can't go more than a couple days without talking to each other. Jimmy is working at Bark in Columbus Ohio and finishing up his Bachelors Degree in Communications at Ohio State" class="gallery-image">
       <!-- The Modal -->
       <div id="jimModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="jim">
-        <div class="caption"></div>
+        <div class="pic-caption jimmy"></div>
       </div>
 
       <!-- Grooms -->
 
-      <img id="pmacImg" src="images/gallery/pmac.JPG" alt="Patrick" class="gallery-image">
+      <img id="pmacImg" src="images/gallery/pmac.JPG" alt="BEST MAN: Patrick Mccarthy" class="gallery-image">
       <!-- The Modal -->
       <div id="pmacModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="pmac">
-        <div class="caption"></div>
+        <div class="pic-caption"></div>
       </div>
 
-      <img id="kunkImg" src="images/gallery/kunk.jpeg" alt="Patrick" class="gallery-image">
+      <img id="kunkImg" src="images/gallery/kunk.jpeg" alt="GROOMSMAN: Patrick Kunkel" class="gallery-image">
       <!-- The Modal -->
       <div id="kunkModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="kunk">
-        <div class="caption"></div>
+        <div class="pic-caption"></div>
       </div>
 
-      <img id="kyleImg" src="images/gallery/kyle.PNG" alt="Kyle" class="gallery-image">
+      <img id="kyleImg" src="images/gallery/kyle.PNG" alt="GROOMSMAN: Kyle Joynes" class="gallery-image">
       <!-- The Modal -->
       <div id="kyleModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="kyle">
-        <div class="caption"></div>
+        <div class="pic-caption"></div>
       </div>
 
-      <img id="raschImg" src="images/gallery/rasch.JPG" alt="Michael" class="gallery-image">
+      <img id="raschImg" src="images/gallery/rasch.JPG" alt="GROOMSMAN: Michael Raschilla" class="gallery-image">
       <!-- The Modal -->
       <div id="raschModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="rasch">
-        <div class="caption"></div>
+        <div class="pic-caption"></div>
       </div>
 
-      <img id="vidImg" src="images/gallery/vid.JPG" alt="Stephen" class="gallery-image">
+      <img id="vidImg" src="images/gallery/vid.JPG" alt="GROOMSMAN: Stephen Vidman" class="gallery-image">
       <!-- The Modal -->
       <div id="vidModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="vid">
-        <div class="caption"></div>
+        <div class="pic-caption"></div>
       </div>
     </div>
   </div>
@@ -802,7 +820,7 @@ var modal = document.getElementById('maraModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('maraImg');
 var modalImg = document.getElementById("mara");
-var captionText = document.getElementsByClassName("caption")[0];
+var captionText = document.getElementsByClassName("pic-caption")[0];
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -820,7 +838,7 @@ var modal = document.getElementById('rachelModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('rachelImg');
 var modalImg = document.getElementById("rachel");
-var captionText = document.getElementsByClassName("caption")[1];
+var captionText = document.getElementsByClassName("pic-caption")[1];
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -838,7 +856,7 @@ var modal = document.getElementById('fiaModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('fiaImg');
 var modalImg = document.getElementById("fia");
-var captionText = document.getElementsByClassName("caption")[2];
+var captionText = document.getElementsByClassName("pic-caption")[2];
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -856,7 +874,7 @@ var modal = document.getElementById('megModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('megImg');
 var modalImg = document.getElementById("meg");
-var captionText = document.getElementsByClassName("caption")[3];
+var captionText = document.getElementsByClassName("pic-caption")[3];
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -874,7 +892,7 @@ var modal = document.getElementById('katieModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('katieImg');
 var modalImg = document.getElementById("katie");
-var captionText = document.getElementsByClassName("caption")[4];
+var captionText = document.getElementsByClassName("pic-caption")[4];
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -892,7 +910,7 @@ var modal = document.getElementById('natModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('natImg');
 var modalImg = document.getElementById("nat");
-var captionText = document.getElementsByClassName("caption")[5];
+var captionText = document.getElementsByClassName("pic-caption")[5];
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -910,7 +928,7 @@ var modal = document.getElementById('jimModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('jimImg');
 var modalImg = document.getElementById("jim");
-var captionText = document.getElementsByClassName("caption")[6];
+var captionText = document.getElementsByClassName("pic-caption")[6];
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -930,7 +948,7 @@ var modal = document.getElementById('pmacModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('pmacImg');
 var modalImg = document.getElementById("pmac");
-var captionText = document.getElementsByClassName("caption")[7];
+var captionText = document.getElementsByClassName("pic-caption")[7];
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -948,7 +966,7 @@ var modal = document.getElementById('kunkModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('kunkImg');
 var modalImg = document.getElementById("kunk");
-var captionText = document.getElementsByClassName("caption")[8];
+var captionText = document.getElementsByClassName("pic-caption")[8];
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -966,7 +984,7 @@ var modal = document.getElementById('kyleModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('kyleImg');
 var modalImg = document.getElementById("kyle");
-var captionText = document.getElementsByClassName("caption")[9];
+var captionText = document.getElementsByClassName("pic-caption")[9];
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -984,7 +1002,7 @@ var modal = document.getElementById('raschModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('raschImg');
 var modalImg = document.getElementById("rasch");
-var captionText = document.getElementsByClassName("caption")[10];
+var captionText = document.getElementsByClassName("pic-caption")[10];
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -1002,7 +1020,7 @@ var modal = document.getElementById('vidModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img = document.getElementById('vidImg');
 var modalImg = document.getElementById("vid");
-var captionText = document.getElementsByClassName("caption")[11];
+var captionText = document.getElementsByClassName("pic-caption")[11];
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
