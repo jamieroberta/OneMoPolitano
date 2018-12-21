@@ -170,6 +170,16 @@ body, html {
   text-align:left;
   line-height: 2.5vw;
 }
+.hotel-address{
+  color:#68051a;
+  font-size:2vw;
+  font-family: 'Great Vibes', cursive;
+}
+.hotel-words{
+  color:#68051a;
+  font-size:1.8vw;
+  text-align:left;
+}
 .hotel-link {
   color: black;
   text-align:left;
@@ -225,11 +235,14 @@ a:hover{
   background-color:white;
   text-align:right;
   padding:50px 80px;
-  text-align: justify;
+  text-align: right;
 }
 .party-title {
-  margin:.5em 0 0 0;
+  margin:0 0 0 0;
   text-align:right;
+}
+.party-words{
+  text-align: right;
 }
 .party-bouquet-left {
   height:100%;
@@ -237,8 +250,13 @@ a:hover{
   left:0;
   top:0;
 }
-.party-groups {
-  text-align:right;
+.gallery {
+  width:50%;
+  margin-left: 50%;
+}
+.gallery-image{
+  width:22%;
+  padding:1%;
 }
 
 .pictures {
@@ -255,17 +273,88 @@ a:hover{
   margin:.5em 0 0 0;
   text-align:center;
 }
-.pictures-bouquet-left {
-  height:100%;
+.pictures-flower-left {
+  width:20%;
   position:absolute;
-  left:0;
-  top:0;
+  left:5%;
+  top:10%;
+}
+.pictures-flower-right {
+  width:20%;
+  position:absolute;
+  right:5%;
+  top:10%;
 }
 .pictures-link {
   color:#68051a;
   text-align: center;
   font-size: 30px;
   text-decoration: none;
+}
+
+.rsvp {
+  position:relative;
+}
+.rsvp-sub {
+  color:black;
+  background-color:white;
+  text-align:center;
+  padding:50px 80px;
+  text-align: justify;
+}
+.rsvp-title {
+  margin:14% 0 0 0;
+  text-align:center;
+}
+.rsvp-bouquet {
+  width:50%;
+  position:absolute;
+  left:25%;
+  top:0;
+}
+.rsvp-link {
+  margin:0 0 16% 0;
+  color:#68051a;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.gifts {
+  position:relative;
+}
+.gifts-sub {
+  color:black;
+  background-color:white;
+  text-align:center;
+  padding:50px 80px;
+  text-align: justify;
+}
+.gifts-title {
+  margin:0 0 0 0;
+  text-align:center;
+}
+.target {
+	width: 20%;
+	padding: 30px;
+  position:absolute;
+  left:10%;
+  top: 40%;
+	vertical-align: top;
+}
+.target:hover {
+  opacity:.7;
+}
+.amazon {
+	width: 20%;
+	padding: 30px;
+  position:absolute;
+  right:10%;
+  top: 40%;
+	vertical-align: top;
+}
+.amazon:hover {
+  opacity:.7;
 }
 
 h3 {
@@ -277,6 +366,76 @@ h3 {
 
 p {
   text-align:center;
+}
+
+#maraImg, #rachelImg, #fiaImg, #megImg, #katieImg, #natImg, #jimImg, #pmacImg, #kunkImg, #kyleImg, #raschImg, #vidImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#maraImg:hover, #rachelImg:hover, #fiaImg:hover, #megImg:hover, #katieImg:hover, #natImg:hover, #jimImg:hover, #pmacImg:hover, #kunkImg:hover, #kyleImg:hover, #raschImg:hover, #vidImg:hover {opacity: 0.7;}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 600px;
+}
+/* Caption of Modal Image */
+.caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+/* Add Animation */
+.modal-content, .caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media only screen and (max-device-width: 1024px) {
@@ -315,17 +474,109 @@ p {
     left:0;
     bottom:0;
   }
+
+  .rsvp-title {
+    margin:2.5% 0 0 0;
+    text-align:center;
+  }
+  .rsvp-bouquet {
+    width:28%;
+    position:absolute;
+    left:36%;
+    top:0;
+  }
+  .rsvp-link {
+    margin:10% 0 0 0;
+    color:#68051a;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+  }
 }
 @media only screen and (max-device-width: 745px) {
+  .home-img {
+    width: 90%;
+  }
   .ceremony {
     float:left;
     position:relative;
-    left:23%;
+    left:0;
   }
   .reception {
     float:left;
     position:relative;
-    left:10%;
+    left:0;
+  }
+  .info {
+    font-size: 4vw;
+  }
+  .info-date {
+    font-size: 5vw;
+  }
+
+  .hotel-address{
+    font-size:3.5vw;
+  }
+  .hotel-words{
+    font-size:4vw;
+  }
+  .hotel-link {
+    font-size: 4vw;
+  }
+
+  .party-sub{
+    padding-right: 40px;
+  }
+
+  .party-words {
+    font-size: 2.5vw;
+  }
+
+  .pictures-link{
+    font-size: 20px;
+  }
+
+  .gallery {
+    width:70%;
+    margin-left: 30%;
+  }
+  .gallery-image{
+    width:22%;
+    padding:1%;
+  }
+
+  .rsvp-sub {
+    padding:0 80px 50px 80px;
+  }
+  .rsvp-title {
+    padding:13% 0 0 0;
+    margin: 0;
+    text-align:center;
+  }
+  .rsvp-bouquet {
+    width:28%;
+    position:absolute;
+    left:36%;
+    top:0;
+  }
+  .rsvp-link {
+    margin:10% 0 0 0;
+    color:#68051a;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .target {
+    top: 60%;
+  }
+
+  .amazon {
+    top: 60%;
+  }
+
+  .modal-content {
+    width: 100%;
   }
 }
 </style>
@@ -356,8 +607,8 @@ p {
 <div class="hotel">
   <div class="hotel-sub">
     <img class="hotel-bouquet" src="hotel-bouquet.png"></img>
-    <h3 class="hotel-title">Hotel<span style="color:#68051a;font-size:2vw;font-family: 'Great Vibes', cursive;"></br>The Avalon Inn and Resort</br>9519 E Market St, Warren, Ohio 44484</span></h3>
-    <p style="color:#68051a;font-size:1.8vw;text-align:left;">There will be shuttles to escort guests to and from the reception</br>at the beginning and end of the night!</p>
+    <h3 class="hotel-title">Hotel<span class="hotel-address"></br>The Avalon Inn and Resort</br>9519 E Market St, Warren, Ohio 44484</span></h3>
+    <p class="hotel-words">There will be shuttles to escort guests to and from the reception</br>at the beginning and end of the night!</p>
     <p style="text-align:left;"><a class="hotel-link" href="https://www.reseze.net/servlet/SendPage?hotelid=1528&skipfirstpage=true&page=38124" target="_blank">Click here to book a hotel room!</a></p>
   </div>
 </div>
@@ -387,8 +638,107 @@ p {
   <div class="party-sub">
     <img class="party-bouquet-left" src="party-bouquet.png"></img>
     <h3 class="party-title">Wedding Party</h3>
-    <p class="party-groups">Jamie's People:</p>
-    <p class="party-groups">Stephen's People:</p>
+    <p class ="party-words">Click on their picture to see who they are!</p>
+    <div class="gallery">
+      <!-- Brides -->
+      <img id="maraImg" src="images/gallery/mara.jpeg" alt="Mara" class="gallery-image">
+      <!-- The Modal -->
+      <div id="maraModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="mara">
+        <div class="caption"></div>
+      </div>
+
+      <img id="rachelImg" src="images/gallery/rae.jpeg" alt="Rachel" class="gallery-image">
+      <!-- The Modal -->
+      <div id="rachelModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="rachel">
+        <div class="caption"></div>
+      </div>
+
+      <img id="fiaImg" src="images/gallery/fia.jpg" alt="Fia" class="gallery-image">
+      <!-- The Modal -->
+      <div id="fiaModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fia">
+        <div class="caption"></div>
+      </div>
+
+      <img id="megImg" src="images/gallery/meg.JPG" alt="Megan" class="gallery-image">
+      <!-- The Modal -->
+      <div id="megModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="meg">
+        <div class="caption"></div>
+      </div>
+
+      <img id="katieImg" src="images/gallery/katie.jpeg" alt="Katie" class="gallery-image">
+      <!-- The Modal -->
+      <div id="katieModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="katie">
+        <div class="caption"></div>
+      </div>
+
+      <img id="natImg" src="images/gallery/nat.JPG" alt="Natalie" class="gallery-image">
+      <!-- The Modal -->
+      <div id="natModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="nat">
+        <div class="caption"></div>
+      </div>
+
+      <img id="jimImg" src="images/gallery/jimmy.JPG" alt="James" class="gallery-image">
+      <!-- The Modal -->
+      <div id="jimModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="jim">
+        <div class="caption"></div>
+      </div>
+
+      <!-- Grooms -->
+
+      <img id="pmacImg" src="images/gallery/pmac.JPG" alt="Patrick" class="gallery-image">
+      <!-- The Modal -->
+      <div id="pmacModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="pmac">
+        <div class="caption"></div>
+      </div>
+
+      <img id="kunkImg" src="images/gallery/kunk.jpeg" alt="Patrick" class="gallery-image">
+      <!-- The Modal -->
+      <div id="kunkModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="kunk">
+        <div class="caption"></div>
+      </div>
+
+      <img id="kyleImg" src="images/gallery/kyle.PNG" alt="Kyle" class="gallery-image">
+      <!-- The Modal -->
+      <div id="kyleModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="kyle">
+        <div class="caption"></div>
+      </div>
+
+      <img id="raschImg" src="images/gallery/rasch.JPG" alt="Michael" class="gallery-image">
+      <!-- The Modal -->
+      <div id="raschModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="rasch">
+        <div class="caption"></div>
+      </div>
+
+      <img id="vidImg" src="images/gallery/vid.JPG" alt="Stephen" class="gallery-image">
+      <!-- The Modal -->
+      <div id="vidModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="vid">
+        <div class="caption"></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -400,6 +750,8 @@ p {
 
 <div class="pictures">
   <div class="pictures-sub">
+    <img class="pictures-flower-left" src="pictures-flower-left.png"></img>
+      <img class="pictures-flower-right" src="pictures-flower-right.png"></img>
     <h3 class="pictures-title">More Pictures</h3>
     <p style="text-align:center;"><a class="pictures-link" href="https://emilymillayphotography.pixieset.com/g/jamieandstephen/" target="_blank">Click here to see all our engagment photos!</a></p>
     <p>Thank you Emilymillayphotography!</p>
@@ -412,10 +764,11 @@ p {
   </div>
 </div>
 
-<div class="pictures">
-  <div class="pictures-sub">
-    <h3 class="pictures-title">RSVP</h3>
-    <p>This will be available when you get your formal invitation!</p>
+<div class="rsvp">
+  <div class="rsvp-sub">
+    <img class="rsvp-bouquet" src="rsvp-bouquet.png"></img>
+    <h3 class="rsvp-title">RSVP</h3>
+    <p class="rsvp-link">This will be available when you get your formal invitation!</p>
   </div>
 </div>
 
@@ -425,10 +778,12 @@ p {
   </div>
 </div>
 
-<div class="pictures">
-  <div class="pictures-sub">
-    <h3 class="pictures-title">Gifts</h3>
-    <p>We are Registered at</p>
+<div class="gifts">
+  <div class="gifts-sub">
+    <h3 class="gifts-title">Gifts</h3>
+    <p style="color:#68051a;">Click the logos to view our regsitries!</p>
+    <a href="https://www.target.com/gift-registry/gift/politano" target="_blank"><img src="images/target.png" class="target"></img></a>
+    <a href="https://www.amazon.com/wedding/share/politano" target="_blank"><img src="images/amazon.png" class="amazon"></img></a>
   </div>
 </div>
 
@@ -437,6 +792,230 @@ p {
   <span class="border"></span>
   </div>
 </div>
+
+
+
+<script>
+// Brides
+// Get the mara modal
+var modal = document.getElementById('maraModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('maraImg');
+var modalImg = document.getElementById("mara");
+var captionText = document.getElementsByClassName("caption")[0];
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Get the rachel modal
+var modal = document.getElementById('rachelModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('rachelImg');
+var modalImg = document.getElementById("rachel");
+var captionText = document.getElementsByClassName("caption")[1];
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[1];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Get the fia modal
+var modal = document.getElementById('fiaModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('fiaImg');
+var modalImg = document.getElementById("fia");
+var captionText = document.getElementsByClassName("caption")[2];
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[2];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Get the meg modal
+var modal = document.getElementById('megModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('megImg');
+var modalImg = document.getElementById("meg");
+var captionText = document.getElementsByClassName("caption")[3];
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[3];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Get the katie modal
+var modal = document.getElementById('katieModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('katieImg');
+var modalImg = document.getElementById("katie");
+var captionText = document.getElementsByClassName("caption")[4];
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[4];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Get the natalie modal
+var modal = document.getElementById('natModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('natImg');
+var modalImg = document.getElementById("nat");
+var captionText = document.getElementsByClassName("caption")[5];
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[5];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Get the jimmy modal
+var modal = document.getElementById('jimModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('jimImg');
+var modalImg = document.getElementById("jim");
+var captionText = document.getElementsByClassName("caption")[6];
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[6];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Grooms
+
+// Get the pmac modal
+var modal = document.getElementById('pmacModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('pmacImg');
+var modalImg = document.getElementById("pmac");
+var captionText = document.getElementsByClassName("caption")[7];
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[7];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Get the kunk modal
+var modal = document.getElementById('kunkModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('kunkImg');
+var modalImg = document.getElementById("kunk");
+var captionText = document.getElementsByClassName("caption")[8];
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[8];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Get the kyle modal
+var modal = document.getElementById('kyleModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('kyleImg');
+var modalImg = document.getElementById("kyle");
+var captionText = document.getElementsByClassName("caption")[9];
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[9];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Get the rasch modal
+var modal = document.getElementById('raschModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('raschImg');
+var modalImg = document.getElementById("rasch");
+var captionText = document.getElementsByClassName("caption")[10];
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[10];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Get the vid modal
+var modal = document.getElementById('vidModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('vidImg');
+var modalImg = document.getElementById("vid");
+var captionText = document.getElementsByClassName("caption")[11];
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[11];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+</script>
 
 </body>
 </html>
