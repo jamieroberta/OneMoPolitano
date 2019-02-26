@@ -308,7 +308,7 @@ a:hover{
   text-align: justify;
 }
 .rsvp-title {
-  margin:14% 0 0 0;
+  margin:auto;
   text-align:center;
 }
 .rsvp-bouquet {
@@ -318,11 +318,18 @@ a:hover{
   top:0;
 }
 .rsvp-link {
-  margin:0 0 16% 0;
+  margin: auto;
   color:#68051a;
   text-align: center;
   font-size: 20px;
   text-decoration: none;
+}
+.rsvp-linklink {
+  color:#68051a;
+  text-align: center;
+  font-size: 45px;
+  text-decoration: none;
+  z-index: 100;
 }
 
 .gifts {
@@ -484,7 +491,7 @@ p {
   }
 
   .rsvp-title {
-    margin:2.5% 0 0 0;
+    margin:auto;
     text-align:center;
   }
   .rsvp-bouquet {
@@ -494,7 +501,7 @@ p {
     top:0;
   }
   .rsvp-link {
-    margin:10% 0 0 0;
+    margin: auto;
     color:#68051a;
     text-align: center;
     font-size: 20px;
@@ -561,8 +568,7 @@ p {
     padding:0 80px 50px 80px;
   }
   .rsvp-title {
-    padding:13% 0 0 0;
-    margin: 0;
+    margin: 10% 0 0 0;
     text-align:center;
   }
   .rsvp-bouquet {
@@ -572,7 +578,15 @@ p {
     top:0;
   }
   .rsvp-link {
-    margin:10% 0 0 0;
+    margin: auto;
+    color:#68051a;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  .rsvp-linklink {
+    margin: auto;
     color:#68051a;
     text-align: center;
     font-size: 20px;
@@ -796,9 +810,9 @@ p {
 
 <div class="rsvp">
   <div class="rsvp-sub">
-    <img class="rsvp-bouquet" src="rsvp-bouquet.png"></img>
-    <h3 class="rsvp-title">RSVP</h3>
-    <p class="rsvp-link">This will be available when you get your formal invitation!</p>
+      <h3 class="rsvp-title">RSVP</h3>
+      <p style="text-align:center;"><a class="rsvp-linklink" href="https://onemopolitano.app.rsvpify.com/" target="_blank">Click here to RSVP!</a></p>
+      <p class="rsvp-link">Please RSVP by April 12th!</p>
   </div>
 </div>
 
